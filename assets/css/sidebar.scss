@@ -1,0 +1,99 @@
+.sidebar-filters {
+    --sidebar-title-display: none;
+    --sidebar-top-padding: 0;
+    @include for-desktop {
+      --sidebar-content-padding: 0 var(--spacer-xl);
+      --sidebar-bottom-padding: 0 var(--spacer-xl);
+    }
+  }
+  
+  ::v-deep .sf-sidebar__aside {
+    --sidebar-z-index: 3;
+  }
+  
+  ::v-deep .sf-sidebar__circle-icon {
+    background-color: var(--_c-copia-primary-red);
+  }
+  ::v-deep .sf-circle-icon {
+    --button-background: var(--_c-copia-primary-red) !important;
+    --button-box-shadow: 0 0 0 0.3125rem var(--_c-copia-primary-red) !important;;
+  }
+  ::v-deep .sf-checkbox__checkmark {
+    border-color: var(--_c-copia-primary-gray) !important;
+  }
+  ::v-deep .sf-checkbox__checkmark.is-active {
+    background: var(--_c-copia-primary-yellow);
+    border: var(--_c-copia-primary-yellow);
+  }
+  
+  ::v-deep .sf-checkbox__checkmark.is-active .sf-icon {
+    --icon-color: var(--_c-copia-primary-black) !important;
+    color: var(--_c-copia-primary-black) !important;
+  }
+  
+  .filters {
+    &__title {
+      --heading-title-font-size: 14px;
+      --heading-title-font-family: var(--font-family--primary);
+      --heading-title-color: var(--_c-copia-primary-black);
+      --heading-titile-font-weight: 600;
+      --heading-title-line-height: 17.5px;
+      margin: var(--spacer-xl) 0 var(--spacer-base) 0;
+      &:first-child {
+        margin: calc(var(--spacer-xl) + var(--spacer-base)) 0 var(--spacer-xs) 0;
+      }
+    }
+    &__colors {
+      display: flex;
+    }
+    &__color {
+      margin: var(--spacer-xs) var(--spacer-xs) var(--spacer-xs) 0;
+    }
+    &__chosen {
+      color: var(--c-text-muted);
+      font-weight: var(--font-weight--normal);
+      font-family: var(--font-family--secondary);
+      position: absolute;
+      right: var(--spacer-xl);
+    }
+    &__item {
+      --radio-container-padding: 0 var(--spacer-sm) 0 var(--spacer-xl);
+      --radio-background: transparent;
+      --filter-label-color: var(--c-secondary-variant);
+      --filter-count-color: var(--c-secondary-variant);
+      --checkbox-padding: 0 var(--spacer-sm) 0 var(--spacer-xl);
+      padding: var(--spacer-sm) 0;
+      border-bottom: 1px solid var(--c-light);
+      &:last-child {
+        border-bottom: 0;
+      }
+      @include for-desktop {
+        --checkbox-padding: 0;
+        margin: var(--spacer-sm) 0;
+        border: 0;
+        padding: 0;
+      }
+    }
+    &__accordion-item {
+      --accordion-item-content-padding: 0;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      width: 100vw;
+    }
+    &__buttons {
+      margin: var(--spacer-sm) 0;
+    }
+    &__button-clear {
+      --button-background: var(--c-light);
+      --button-color: var(--c-dark-variant);
+      margin: var(--spacer-xs) 0 0 0;
+    }
+  }
+  
+  ::v-deep .sf-accordion-item__header.is-open {
+    --accordion-item-header-color: var(--c_copia_primary_black);
+    --chevron-color: var(--c_copia_primary_black);
+  }

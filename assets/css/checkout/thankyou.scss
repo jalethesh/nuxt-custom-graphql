@@ -1,0 +1,90 @@
+#thank-you {
+  box-sizing: border-box;
+  @include for-desktop {
+    max-width: 1272px;
+    padding: 0 var(--spacer-sm);
+    margin: 0 auto;
+  }
+}
+.banner {
+  --call-to-action-color: var(--c-text);
+  --call-to-action-title-font-size: var(--h3-font-size);
+  --call-to-action-title-font-weight: 800;
+  @include for-desktop {
+    margin: 0 0 var(--spacer-2xl) 0;
+  }
+  &__order-number {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family--secondary);
+    font-size: var(--font-size--base);
+      
+    @include for-desktop {
+      flex-direction: row;
+      font-size: var(--font-size--normal);
+    }
+  }
+}
+.section {
+  background: var(--c-light);
+  flex-direction: row;
+  padding: 0;
+  @include for-mobile {
+    margin-top: var(--spacer-xs);
+  }
+}
+.order {
+  background: var(--c-light);
+  padding: var(--spacer-xl) var(--spacer-2xl);
+  &__heading {
+    --heading-title-color: var(--_c-copia-secondary-black);
+    @include for-mobile {
+      --heading-title-color: var(--_c-copia-primary-black);
+      padding: 0px;      
+    }
+  }
+  &__paragraph {
+    font-size: var(--font-size--sm);
+    font-family: var(--font-family--secondary);
+    color: var(--_c-copia-secondary-black);
+    padding: var(--spacer-base) 0 var(--spacer-lg);
+    @include for-mobile {
+      font-size: var(--font-size--base);
+      padding: var(--spacer-base) 0 var(--spacer-base);
+    }
+  }
+  &__contact {
+    font-size: var(--font-size--sm);
+    color: var(--_c-copia-secondary-black);
+    font-weight: var(--font-weight--semibold);
+    padding: var(--spacer-sm);
+    border: 2px solid var(--c-white);
+    border-width: 2px 0 2px 0;
+    & .sf-heading__title {
+      font-family: var(--font-family--primary);
+      padding-bottom: var(--spacer-xs);
+      color: var(--_c-copia-primary-black) !important;
+      line-height: 22px;
+    }
+    @include for-mobile {
+      border: none;
+      padding: 0px;
+    }
+  }
+  @include for-mobile {
+    padding: var(--spacer-base) var(--spacer-sm);
+  }
+}
+
+::v-deep {
+  .sf-call-to-action {
+    &__title {
+      font-size: var(--h2-font-size);
+    }
+    @include for-mobile {
+      &__text-container {
+        width: 60%;
+      }
+    }
+  }
+}

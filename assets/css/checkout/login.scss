@@ -1,0 +1,75 @@
+.header-text {
+  font-family: var(--font-family--primary);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;    
+  text-transform: uppercase;
+  @include for-mobile {
+    font-size: var(--font-size--lg);
+    text-transform: none;
+    font-weight: 700;
+  }
+}
+.reset-pass-text {
+  margin-bottom: var(--spacer-xl);
+}
+
+.forgot-password {
+  font-family: var(--font-family--primary);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--_c-copia-primary-blue);
+  text-decoration: underline;
+}
+
+.form {
+  margin-top: 30px;
+}
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--spacer-xl) 0 var(--spacer-xl) 0;
+  font: var(--font-weight--light) var(--font-size--base) / 1.6
+    var(--font-family--secondary);
+  & > * {
+    margin: 0 0 0 var(--spacer-xs);
+  }
+}
+.action {
+  margin: var(--spacer-xl) 0 var(--spacer-xl) 0;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 16px;
+  h5 {
+    font-family: var(--font-family--primary);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  p {
+    font-family: var(--font-family--primary);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.forgot-password {
+  color: #0468db;
+  background: #fff;
+  font-weight: var(--font-weight--bold);
+  font-size: var(--font-size--sm);
+  font-family: var(--font-family--primary);
+}
+
+p {
+  color: var(--_c-copia-secondary-black);
+}
